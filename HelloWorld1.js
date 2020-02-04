@@ -1,7 +1,13 @@
 var HelloWorld = /** @class */ (function () {
-    function HelloWorld(paramas) {
+    function HelloWorld(firstName, lastName) {
+        this.firstName = '';
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    HelloWorld.prototype.greet = function () { console.log('lucas phans'); };
-    HelloWorld.prototype.showGreet = function () { console.log(); };
+    HelloWorld.prototype.sayHello = function () {
+        console.log('Hello World!' + 'My name is ' + this.firstName + '.' + this.lastName);
+    };
     return HelloWorld;
 }());
+var myHelloClassInstance = new HelloWorld('eduardo', 'morales');
+myHelloClassInstance.sayHello();

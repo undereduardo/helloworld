@@ -1,5 +1,12 @@
 class HelloWorld{
-    constructor(paramas){}
-    greet(){console.log('lucas phans')}
-    showGreet(){console.log()}
+    
+    constructor(public firstName: string, public lastName: string){
+
+    }
+sayHello(){
+    console.log('Hello World!'+ 'My name is ' + this.firstName + '.' + this.lastName);
 }
+
+}
+const myHelloClassInstance = new HelloWorld('eduardo','morales');
+myHelloClassInstance.sayHello();
